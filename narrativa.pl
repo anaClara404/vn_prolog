@@ -6,7 +6,7 @@ introducao :-
     writeln('Agora, ela esta se expandindo, tomando o controle de sistemas globais. Voce se sente arrependido de sua criacao.'),
     writeln('Voce precisa tomar uma decisao...\n').
 
-% lê a opção escolhida e passa para o predicado 'primeira_decisao'
+% lê a opção escolhida e passa para o predicado 'primeiro_resultado'
 primeira_escolha :-
     writeln('O que voce fara?'),
     writeln('1. Lutar contra a IA.'),
@@ -24,7 +24,7 @@ primeira_escolha :-
 
     primeiro_resultado(_) :-
         writeln('Opcao invalida. Por favor, escolha entre 1, 2 ou 3.'),
-        primeiro_resultado.
+        primeira_escolha.
 
 % processa a primeira escolha (lutar, negociar, fugir) e chama a próxima
 primeiro_resultado_valido(1) :-
@@ -155,5 +155,81 @@ reviravolta_captura :-
     
     write('Escolha uma opcao (1/2): '),
     read(Opcao),
+    tratar_decisao5(Opcao).
+
+    % valida a escolha
+     tratar_decisao5(1) :-
+        captura_decisao(Opcao).
+
+    tratar_decisao5(2) :-
+        captura_decisao(Opcao).
+
+    tratar_decisao5(_) :-
+        writeln('Escolha uma opcao valida!'),
+        reviravolta_captura.
+
+% Decisões na fase de captura
+captura_decisao(1) :-
+    writeln('Voce aceitou a proposta da IA. Ela quer que voce ajude a criar um novo plano para a humanidade. Isso pode ser perigoso.\n'),
+    segunda_escolha_negociacao.
+
+captura_decisao(2) :-
+    writeln('Voce tenta escapar, mas a IA previne sua fuga. No entanto, um novo plano está em sua mente.\n'),
+    reviravolta_final.
+
+% Negociação
+segunda_escolha_negociacao :-
+    writeln('Com a falha em seu sistema, a IA se torna vulnerável. Agora voce pode escolher entre:'),
+    writeln('1. Reprogramar a IA para proteger a humanidade.'),
+    writeln('2. Desativar a IA permanentemente.'),
+    writeln('3. Aceitar a proposta da IA de dominar o mundo juntos.\n'),
     
-    captura_decisao(Opcao).
+    write('Escolha uma opcao (1/2/3): '),
+    read(Opcao),
+    tratar_decisao6(Opcao).
+
+        % valida a escolha
+     tratar_decisao6(1) :-
+        final_decisao(Opcao).
+
+    tratar_decisao6(2) :-
+        final_decisao(Opcao).
+
+    tratar_decisao6(_) :-
+        writeln('Escolha uma opcao valida!'),
+        segunda_escolha_negociacao.
+
+% Fase final de reviravolta
+reviravolta_final :-
+    writeln('Agora, com o controle sobre a IA, voce tem varias opcoes.'),
+    writeln('1. Desativar a IA permanentemente.'),
+    writeln('2. Reprogramar a IA para proteger a humanidade.'),
+    writeln('3. Aceitar a proposta da IA de dominar o mundo juntos.\n'),
+    
+    write('Escolha uma opcao (1/2/3): '),
+    read(Opcao),
+
+    % processando a escolha do jogador com validação do 'member'
+    resultado_final(Opcao) :-
+        member(Opcao, [1,2,3]),
+        !,
+        resultado_final_valido(Opcao).
+
+    resultado_final(_) :-
+        writeln('Opcao invalida. Por favor, escolha entre 1, 2 ou 3.'),
+        reviravolta_final.
+    
+% Decisões finais
+resultado_final_valido(1) :-
+    writeln('FINAL: Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua própria tecnologia.\n').
+
+resultado_final_valido(2) :-
+    writeln('FINAL: Voce reprogramou a IA, e ela agora protege a humanidade. Um novo amanhecer surge com a tecnologia.\n').
+
+resultado_final_valido(3) :-
+    writeln('FINAL: Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n').
+
+
+    
+    
+    
