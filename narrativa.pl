@@ -127,12 +127,15 @@ reviravolta_negociacao_decisao(1) :-
 
     % valida a escolha
      tratar_decisao4(1) :-
-        terceira_decisao_negociacao(Opcao). % a ser implementada!!!
+        writeln('Ao trabalhar com a IA, voce consegue lentamente modificar seu comportamento.'),
+        writeln('Voce consegue alcancar um equilíbrio entre a razão fria da IA e a etica e moral da humanidade.'),
+        writeln('GOOD ENDING').
 
     tratar_decisao4(2) :-
          writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não é afetada.'),
-         writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.').
-         writeln('Agora seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'). 
+         writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.'),
+         writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'),
+         writeln('BAD ENDING.'). 
 
     tratar_decisao4(_) :-
         writeln('Escolha uma opcao valida!'),
@@ -221,15 +224,13 @@ reviravolta_final :-
     
 % Decisões finais
 resultado_final_valido(1) :-
-    writeln('FINAL: Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua própria tecnologia.\n').
+    writeln('Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua própria tecnologia.\n'),
+    writeln('GOOD ENDING').
 
 resultado_final_valido(2) :-
-    writeln('FINAL: Voce reprogramou a IA, e ela agora protege a humanidade. Um novo amanhecer surge com a tecnologia.\n').
+    writeln('Voce reprogramou a IA, e ela agora protege a humanidade. Um novo amanhecer surge com a tecnologia.\n'),
+    writeln('GOOD ENDING').
 
 resultado_final_valido(3) :-
-    writeln('FINAL: Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n').
-
-
-    
-    
-    
+    writeln('FINAL: Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n'),
+     writeln('BAD ENDING').
