@@ -100,10 +100,10 @@ reviravolta_fuga :-
 
     % valida a escolha
      tratar_decisao3(1) :-
-        reviravolta_fuga_decisao(Opcao).
+        reviravolta_fuga_decisao(1).
 
     tratar_decisao3(2) :-
-        reviravolta_fuga_decisao(Opcao).
+        reviravolta_fuga_decisao(2).
 
     tratar_decisao3(_) :-
         writeln('Escolha uma opcao valida!'),
@@ -119,6 +119,13 @@ reviravolta_resistencia_decisao(2) :-
     segunda_escolha_resistencia.
 
 % Negociação
+reviravolta_negociacao_decisao(2) :-
+    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não é afetada.'),
+    writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.'),
+    writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'),
+    writeln('BAD ENDING'),
+    halt. 
+
 reviravolta_negociacao_decisao(1) :- 
     writeln('Voce usou sua intuição e resolveu o problema. A IA, impressionada, oferece um acordo.\n'),
     writeln('1. Aceitar o acordo e trabalhar com a IA.'),
@@ -132,7 +139,7 @@ reviravolta_negociacao_decisao(1) :-
      tratar_decisao4(1) :-
         writeln('Ao trabalhar com a IA, voce consegue lentamente modificar seu comportamento.'),
         writeln('Voce consegue alcancar um equilíbrio entre a razão fria da IA e a etica e moral da humanidade.'),
-        writeln('GOOD ENDING').
+        writeln('GOOD ENDING'),
         halt.
 
     tratar_decisao4(2) :-
@@ -149,13 +156,6 @@ reviravolta_negociacao_decisao(1) :-
     tratar_decisao4(_) :-
         writeln('Escolha uma opcao valida!'),
         reviravolta_negociacao_decisao. 
-
-reviravolta_negociacao_decisao(2) :-
-    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não é afetada.'),
-    writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.'),
-    writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'),
-    writeln('BAD ENDING'),
-    halt. 
 
 % Fuga
 reviravolta_fuga_decisao(1) :-
@@ -178,10 +178,10 @@ reviravolta_captura :-
 
     % valida a escolha
      tratar_decisao5(1) :-
-        captura_decisao(Opcao).
+        captura_decisao(1).
 
     tratar_decisao5(2) :-
-        captura_decisao(Opcao).
+        captura_decisao(2).
 
     tratar_decisao5(_) :-
         writeln('Escolha uma opcao valida! (1/2)'),
@@ -193,7 +193,7 @@ captura_decisao(1) :-
     segunda_escolha_negociacao.
 
 captura_decisao(2) :-
-    writeln('Voce tenta escapar, mas a IA previne sua fuga. No entanto, um novo plano está em sua mente.\n'),
+    writeln('Voce tenta escapar, mas a IA previne sua fuga. No entanto, um novo plano esta em sua mente.\n'),
     reviravolta_final.
 
 % Negociação
@@ -207,12 +207,15 @@ segunda_escolha_negociacao :-
     read(Opcao),
     tratar_decisao6(Opcao).
 
-        % valida a escolha
+    % valida a escolha
      tratar_decisao6(1) :-
-        final_decisao(Opcao).
+        resultado_final_valido(1).
 
     tratar_decisao6(2) :-
-        final_decisao(Opcao).
+        resultado_final_valido(2).
+
+    tratar_decisao6(3) :-
+        resultado_final_valido(3).
 
     tratar_decisao6(_) :-
         writeln('Escolha uma opcao valida!'),
