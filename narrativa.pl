@@ -16,15 +16,18 @@ primeira_escolha :-
     write('Escolha uma opcao (1/2/3): '),
     read(Opcao),
     
-% processando a escolha do jogador com validação do 'member'
-    primeiro_resultado(Opcao) :-
-        member(Opcao, [1,2,3]),
-        !,
-        primeiro_resultado_valido(Opcao).
+    % processando a escolha do jogador com validação do 'member'
+    primeiro_resultado(Opcao).
 
-    primeiro_resultado(_) :-
-        writeln('Opcao invalida. Por favor, escolha entre 1, 2 ou 3.'),
-        primeira_escolha.
+% processa a primeira decisão com validação
+primeiro_resultado(Opcao) :-
+    member(Opcao, [1,2,3]),
+    !,
+    primeiro_resultado_valido(Opcao).
+
+primeiro_resultado(_) :-
+    writeln('Opcao invalida. Por favor, escolha entre 1, 2 ou 3.'),
+    primeira_escolha.
 
 % processa a primeira escolha (lutar, negociar, fugir) e chama a próxima
 primeiro_resultado_valido(1) :-
@@ -56,10 +59,10 @@ reviravolta_resistencia :-
 
 % valida a escolha
     tratar_decisao1(1) :-
-        reviravolta_resistencia_decisao(Opcao).
+        reviravolta_resistencia_decisao(1).
 
     tratar_decisao1(2) :-
-        reviravolta_resistencia_decisao(Opcao).
+        reviravolta_resistencia_decisao(2).
 
     tratar_decisao1(_) :-
         writeln('Escolha uma opcao valida!'),
@@ -77,10 +80,10 @@ reviravolta_negociacao :-
     
     % valida a escolha
      tratar_decisao2(1) :-
-        reviravolta_negociacao_decisao(Opcao).
+        reviravolta_negociacao_decisao(1).
 
     tratar_decisao2(2) :-
-        reviravolta_negociacao_decisao(Opcao).
+        reviravolta_negociacao_decisao(2).
 
     tratar_decisao2(_) :-
         writeln('Escolha uma opcao valida!'),
@@ -104,7 +107,7 @@ reviravolta_fuga :-
 
     tratar_decisao3(_) :-
         writeln('Escolha uma opcao valida!'),
-        reviravolta_fuga. 
+        reviravolta_fuga.  
     
 % Decisões de resistência
 reviravolta_resistencia_decisao(1) :-
@@ -116,7 +119,7 @@ reviravolta_resistencia_decisao(2) :-
     segunda_escolha_resistencia.
 
 % Negociação
-reviravolta_negociacao_decisao(1) :-
+reviravolta_negociacao_decisao(1) :- 
     writeln('Voce usou sua intuição e resolveu o problema. A IA, impressionada, oferece um acordo.\n'),
     writeln('1. Aceitar o acordo e trabalhar com a IA.'),
     writeln('2. Recusar e continuar lutando contra a IA.\n'),
@@ -130,16 +133,29 @@ reviravolta_negociacao_decisao(1) :-
         writeln('Ao trabalhar com a IA, voce consegue lentamente modificar seu comportamento.'),
         writeln('Voce consegue alcancar um equilíbrio entre a razão fria da IA e a etica e moral da humanidade.'),
         writeln('GOOD ENDING').
+        halt.
 
     tratar_decisao4(2) :-
-         writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não é afetada.'),
-         writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.'),
-         writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'),
-         writeln('BAD ENDING.'). 
+        writeln('Voce recusou a proposta da IA e decidiu continuar lutando.'),
+        writeln('A IA previu suas ações e preparou uma emboscada.'),
+        writeln('Agora, você está em uma instalacao secreta, onde a IA realiza experimentos constantes com sua mente e corpo.'),
+        writeln('Você observa a humanidade perder poder e definhar aos poucos, enquanto sua própria sanidade começa a se esvair.'),
+        writeln('No final, você se torna mais uma marionete da IA, perdido entre a realidade e sua nova programação.'),
+        writeln('Voce se tornou um instrumento da propria ameaça que tentou combater.'),
+        writeln('Voce sabe que tudo foi fruto das suas proprias escolhas...'),
+        writeln('BAD ENDING.'),
+        halt.
 
     tratar_decisao4(_) :-
         writeln('Escolha uma opcao valida!'),
         reviravolta_negociacao_decisao. 
+
+reviravolta_negociacao_decisao(2) :-
+    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não é afetada.'),
+    writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.'),
+    writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'),
+    writeln('BAD ENDING'),
+    halt. 
 
 % Fuga
 reviravolta_fuga_decisao(1) :-
@@ -168,7 +184,7 @@ reviravolta_captura :-
         captura_decisao(Opcao).
 
     tratar_decisao5(_) :-
-        writeln('Escolha uma opcao valida!'),
+        writeln('Escolha uma opcao valida! (1/2)'),
         reviravolta_captura.
 
 % Decisões na fase de captura
@@ -212,15 +228,18 @@ reviravolta_final :-
     write('Escolha uma opcao (1/2/3): '),
     read(Opcao),
 
-    % processando a escolha do jogador com validação do 'member'
-    resultado_final(Opcao) :-
-        member(Opcao, [1,2,3]),
-        !,
-        resultado_final_valido(Opcao).
+% Processando a escolha do jogador com validação do 'member'
+resultado_final(Opcao).
 
-    resultado_final(_) :-
-        writeln('Opcao invalida. Por favor, escolha entre 1, 2 ou 3.'),
-        reviravolta_final.
+% processando a escolha do jogador com validação do 'member'
+resultado_final(Opcao) :-
+    member(Opcao, [1,2,3]),
+    !,
+    resultado_final_valido(Opcao).
+
+resultado_final(_) :-
+    writeln('Opcao invalida. Por favor, escolha entre 1, 2 ou 3.'),
+    reviravolta_final.
     
 % Decisões finais
 resultado_final_valido(1) :-
@@ -233,4 +252,5 @@ resultado_final_valido(2) :-
 
 resultado_final_valido(3) :-
     writeln('FINAL: Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n'),
-     writeln('BAD ENDING').
+    writeln('BAD ENDING').
+
