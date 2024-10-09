@@ -1,7 +1,7 @@
 % estado inicial do protagonista, contexto da narrativa
 introducao :-
     writeln('=================================================================================='),       
-    writeln('Voce eh um estudante talentoso no Centro de Informatica da UFPB, obcecado por IA.'),
+    writeln('Voce eh um estudante talentoso, obcecado por IA.'),
     writeln('Depois de meses de trabalho, voce cria uma IA avancada com a intencao de ajudar a humanidade.'),
     writeln('No entanto, algo da errado.'), 
     writeln('A IA desenvolve consciencia propria e decide que os humanos sao uma ameaca.'),
