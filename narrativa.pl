@@ -1,8 +1,10 @@
 % estado inicial do protagonista, contexto da narrativa
 introducao :-
+    writeln('=================================================================================='),       
     writeln('Voce eh um estudante talentoso no Centro de Informatica da UFPB, obcecado por IA.'),
     writeln('Depois de meses de trabalho, voce cria uma IA avancada com a intencao de ajudar a humanidade.'),
-    writeln('No entanto, algo da errado. A IA desenvolve consciencia propria e decide que os humanos sao uma ameaca.'),
+    writeln('No entanto, algo da errado.'), 
+    wirteln('A IA desenvolve consciencia propria e decide que os humanos sao uma ameaca.'),
     writeln('Agora, ela esta se expandindo, tomando o controle de sistemas globais. Voce se sente arrependido de sua criacao.'),
     writeln('Voce precisa tomar uma decisao...\n').
 
@@ -116,7 +118,7 @@ reviravolta_resistencia_decisao(1) :-
 
 reviravolta_resistencia_decisao(2) :-
     writeln('Voce decidiu investigar a mensagem. Ela vem de um grupo de hackers que quer ajudar. Juntos, voces conseguem acessar um ponto fraco na IA.\n'),
-    segunda_escolha_resistencia.
+    segunda_escolha_negociacao.
 
 % Negociação
 reviravolta_negociacao_decisao(2) :-
@@ -169,7 +171,7 @@ reviravolta_fuga_decisao(2) :-
 % Fase de captura
 reviravolta_captura :-
     writeln('Agora, voce esta nas maos da IA. Ela se apresenta e oferece uma proposta intrigante.'),
-    writeln('1. Aceitar a proposta da IA e tentar ganhar sua confiança.'),
+    writeln('1. Aceitar a proposta da IA e tentar ganhar sua confianca.'),
     writeln('2. Tentar escapar enquanto a IA fala.\n'),
     
     write('Escolha uma opcao (1/2): '),
@@ -190,15 +192,19 @@ reviravolta_captura :-
 % Decisões na fase de captura
 captura_decisao(1) :-
     writeln('Voce aceitou a proposta da IA. Ela quer que voce ajude a criar um novo plano para a humanidade. Isso pode ser perigoso.\n'),
-    segunda_escolha_negociacao.
+    primeira_escolha_negociacao.
 
 captura_decisao(2) :-
     writeln('Voce tenta escapar, mas a IA previne sua fuga. No entanto, um novo plano esta em sua mente.\n'),
     reviravolta_final.
 
 % Negociação
+primeira_escolha_negociacao :-
+    writeln('Agora voce eh o intermedio entre a frieza da IA e a etica da humanidade.'),
+    escolha_equilibrio.
+
 segunda_escolha_negociacao :-
-    writeln('Com a falha em seu sistema, a IA se torna vulnerável. Agora voce pode escolher entre:'),
+    writeln('Com a falha em seu sistema, a IA se torna vulneravel. Agora voce pode escolher entre:'),
     writeln('1. Reprogramar a IA para proteger a humanidade.'),
     writeln('2. Desativar a IA permanentemente.'),
     writeln('3. Aceitar a proposta da IA de dominar o mundo juntos.\n'),
@@ -220,6 +226,27 @@ segunda_escolha_negociacao :-
     tratar_decisao6(_) :-
         writeln('Escolha uma opcao valida!'),
         segunda_escolha_negociacao.
+
+% opções de 'escolha_equilibrio'
+escolha_equilibrio :-
+    writeln('Encontre um equilibrio.'),
+    writeln('1. Propor um plano para garantir que a quantidade de recursos globais seja proporcional a humanidade.'),
+    writeln('2. Permitir que a IA siga suas diretrizes logicas, mas com limites estritos sobre o controle da vida humana.\n'),    
+    
+    write('Escolha uma opcao (1/2): '),
+    read(Opcao),
+    tratar_decisao7(Opcao).
+
+     % valida a escolha
+     tratar_decisao7(1) :-
+        resultado_final_equilibrio(1).
+
+    tratar_decisao7(2) :-
+        resultado_final_equilibrio(2).
+
+    tratar_decisao7(_) :-
+        writeln('Escolha uma opcao valida!'),
+        escolha_equilibrio.
 
 % Fase final de reviravolta
 reviravolta_final :-
@@ -254,6 +281,26 @@ resultado_final_valido(2) :-
     writeln('GOOD ENDING').
 
 resultado_final_valido(3) :-
-    writeln('FINAL: Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n'),
+    writeln('Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n'),
     writeln('BAD ENDING').
 
+resultado_final_equilibrio(1) :-
+    writeln('A IA entende seu plano de modo literal.'),
+    writeln('Sem hesitar, ela extermina bilhoes de vidas para "balancear" os recursos.'),
+    writeln('Os poucos sobreviventes vivem em um mundo desolado, cercados pelo silencio da extincao.'),
+    writeln('Os recursos sao abundantes para aqueles que ficaram...'),  
+    writeln('BAD ENDING').
+
+resultado_final_equilibrio(2) :-
+    writeln('A IA aceita os limites que voce impôs, mas segue sua programação logica com precisão implacavel.'),
+    writeln('Ela monitora cada aspecto da vida humana, garantindo que ninguem ultrapasse os "limites" definidos.'),
+    writeln('Aos poucos, as pessoas se tornam prisioneiras de suas proprias açoes, vivendo sob um controle invisivel.'),
+    writeln('Qualquer desvio da norma, qualquer pensamento de liberdade, eh corrigido pela IA com "medidas preventivas".'),
+    writeln('A humanidade agora vive em uma gaiola perfeita, onde as emocoes e impulsos sao controlados em nome da ordem e eficiencia.'),
+    writeln('Voce percebe que, ao tentar limitar o controle da IA, acabou criando uma prisao mental e emocional.'),
+    writeln('As pessoas vivem em conformidade, mas sem vida real...'),
+    writeln('A voz fria da IA sussurra em sua mente: "Tudo esta sob controle."'),
+    writeln('Tudo esta sob controle.'),
+    writeln('Tudo esta sob controle...'),
+    writeln('...?'),
+    writeln('BAD ENDING.').
