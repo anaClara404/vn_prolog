@@ -4,7 +4,7 @@ introducao :-
     writeln('Voce eh um estudante talentoso no Centro de Informatica da UFPB, obcecado por IA.'),
     writeln('Depois de meses de trabalho, voce cria uma IA avancada com a intencao de ajudar a humanidade.'),
     writeln('No entanto, algo da errado.'), 
-    wirteln('A IA desenvolve consciencia propria e decide que os humanos sao uma ameaca.'),
+    writeln('A IA desenvolve consciencia propria e decide que os humanos sao uma ameaca.'),
     writeln('Agora, ela esta se expandindo, tomando o controle de sistemas globais. Voce se sente arrependido de sua criacao.'),
     writeln('Voce precisa tomar uma decisao...\n').
 
