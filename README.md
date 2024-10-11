@@ -20,4 +20,7 @@ Tecnologias usadas:
 1. Interpretador swipl;
 2. Visual Studio Code.
 
+Aqui está a walktrough da visual novel, com todos os caminhos e finais que o usuário pode conseguir de acordo com suas escolhas:
+<https://www.canva.com/design/DAGTTtSLBJI/jtOoT7Eoy5F7ZEM0JqpjuQ/view?utm_content=DAGTTtSLBJI&utm_campaign=designshare&utm_medium=link&utm_source=editor>
+
 Bom jogo!
