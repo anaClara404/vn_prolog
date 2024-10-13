@@ -20,4 +20,7 @@ Tecnologias usadas:
 1. Interpretador swipl;
 2. Visual Studio Code.
 
+Aqui está a walktrough da visual novel, com todos os caminhos e finais que o usuário pode conseguir de acordo com suas escolhas:
+![code horizon walktrough](https://github.com/user-attachments/assets/22c47ad5-229c-42a1-a8a2-5d48edc06cf0)
+
 Bom jogo!
