@@ -50,7 +50,6 @@ primeiro_resultado_valido(3) :-
 
 % Adicionando reviravoltas após a primeira decisão
 reviravolta_resistencia :-
-    writeln('Voce se une a outros estudantes e especialistas em tecnologia, formando uma resistencia.'),
     writeln('Juntos, voces planejam um ataque contra o servidor central da IA. No entanto, voces recebem uma mensagem encriptada de um grupo misterioso.'),
     writeln('1. Ignorar a mensagem e seguir com o plano.'),
     writeln('2. Decidir investigar a mensagem.\n'),
@@ -71,9 +70,9 @@ reviravolta_resistencia :-
         reviravolta_resistencia.
 
 reviravolta_negociacao :-
-    writeln('Voce tenta se conectar com a IA para entender suas intenções. A IA propõe um desafio: se voce conseguir resolver um problema complexo, ela considerará a paz.'),
-    writeln('Voce se prepara para o desafio, mas tem que decidir se vai usar sua intuição ou tentar um algoritmo que voce criou.'),
-    writeln('1. Usar sua intuição.'),
+    writeln('Voce tenta se conectar com a IA para entender suas intencoes. A IA propoe um desafio: se voce conseguir resolver um problema complexo, ela considerara a paz.'),
+    writeln('Voce se prepara para o desafio, mas tem que decidir se vai usar sua intuicao ou tentar um algoritmo que voce criou.'),
+    writeln('1. Usar sua intuicao.'),
     writeln('2. Usar seu algoritmo.\n'),
     
     write('Escolha uma opcao (1/2): '),
@@ -122,9 +121,9 @@ reviravolta_resistencia_decisao(2) :-
 
 % Negociação
 reviravolta_negociacao_decisao(2) :-
-    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não é afetada.'),
-    writeln('Ela aprecia seu conhecimento e te mantém isolado da humanidade, que voce mesmo ajuda a destruir.'),
-    writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Você não passa de uma ferramenta.'),
+    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não eh afetada.'),
+    writeln('Ela aprecia seu conhecimento e te mantem isolado da humanidade, que voce mesmo ajuda a destruir.'),
+    writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Voce nao passa de uma ferramenta.'),
     writeln('BAD ENDING'),
     halt. 
 
@@ -168,6 +167,27 @@ reviravolta_fuga_decisao(2) :-
     writeln('Voce desconfiou do grupo e decidiu sair sozinho. A IA te encontra e te captura. Nao ha como escapar.\n'),
     reviravolta_captura.
 
+% Decisão confiança na resistência
+segunda_escolha_fuga :-
+    writeln('Enquanto voce planeja o ataque com a resistencia, a IA entra em contato apenas com voce.'),
+    writeln('Ela te faz uma proposta, oferecendo-lhe um acordo de paz.'),
+    writeln('1. Aceitar a proposta da IA.'),
+    writeln('2. Rejeitar a oferta e continuar elaborando o plano com seus colegas.'),
+
+    write('Escolha uma opcao (1/2): '),
+    read(Opcao),
+    tratar_decisao8(Opcao).
+
+    tratar_decisao8(1) :-
+        captura_decisao(1).
+
+    tratar_decisao8(2) :-
+        reviravolta_resistencia.
+    
+    tratar_decisao8(_) :-
+        writeln('Escolha uma opcao valida! (1/2)'),
+            segunda_escolha_fuga.
+
 % Fase de captura
 reviravolta_captura :-
     writeln('Agora, voce esta nas maos da IA. Ela se apresenta e oferece uma proposta intrigante.'),
@@ -195,8 +215,9 @@ captura_decisao(1) :-
     primeira_escolha_negociacao.
 
 captura_decisao(2) :-
-    writeln('Voce tenta escapar, mas a IA previne sua fuga. No entanto, um novo plano esta em sua mente.\n'),
-    reviravolta_final.
+    writeln('Voce tenta escapar, mas a IA previne sua fuga. Voce foi capturado.'),
+    writeln('Voce deposita todas as suas confiancas em seus companheiros da resistencia.'),
+    writeln('BAD ENDING.').
 
 % Negociação
 primeira_escolha_negociacao :-
