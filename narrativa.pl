@@ -294,12 +294,12 @@ resultado_final(_) :-
     
 % Decisões finais
 resultado_final_valido(1) :-
-    writeln('Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua propria tecnologia.\n'),
-    writeln('[GOOD ENDING]').
+    writeln('Voce reprogramou a IA, e ela agora protege a humanidade. Um novo amanhecer surge com a tecnologia.\n'),
+    writeln('[GOOD ENDING]').  
 
 resultado_final_valido(2) :-
-    writeln('Voce reprogramou a IA, e ela agora protege a humanidade. Um novo amanhecer surge com a tecnologia.\n'),
-    writeln('[GOOD ENDING]').
+    writeln('Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua propria tecnologia.\n'),
+    writeln('[GOOD ENDING]'). 
 
 resultado_final_valido(3) :-
     writeln('Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n'),
