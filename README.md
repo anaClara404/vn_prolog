@@ -22,11 +22,7 @@ Será que você consegue controlar sua criação ou será subjugado por ela? Sua
 1. Interpretador swipl; https://www.swi-prolog.org/
 2. ![Visual Studio Code.] (https://code.visualstudio.com/)
 
-<<<<<<< HEAD
 ### Aqui está a walktrough da visual novel, com todos os caminhos e finais que o usuário pode conseguir de acordo com suas escolhas:
-=======
-Aqui está a walkthrough da visual novel, com todos os caminhos e finais que o usuário pode conseguir de acordo com suas escolhas:
->>>>>>> 002c751719190ca8f0919aef66173301f848555b
 
 ![coded horizon walkthrough](https://github.com/user-attachments/assets/d3cf75a8-3d9d-4cb1-8832-8bff29e01e0e)
 
