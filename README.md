@@ -27,4 +27,4 @@ Será que você consegue controlar sua criação ou será subjugado por ela? Sua
 ![coded horizon walkthrough](https://github.com/user-attachments/assets/d3cf75a8-3d9d-4cb1-8832-8bff29e01e0e)
 
 
-## Bom jogo! 🎮
+### Bom jogo! 🎮
