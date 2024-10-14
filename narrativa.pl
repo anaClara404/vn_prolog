@@ -124,11 +124,11 @@ reviravolta_negociacao_decisao(2) :-
     writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e nao eh afetada.'),
     writeln('Ela aprecia seu conhecimento e te mantem isolado da humanidade, que voce mesmo ajuda a destruir.'),
     writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Voce nao passa de uma ferramenta.'),
-    writeln('BAD ENDING'),
+    writeln('[BAD ENDING]'),
     halt. 
 
 reviravolta_negociacao_decisao(1) :- 
-    writeln('Voce usou sua intuição e resolveu o problema. A IA, impressionada, oferece um acordo.\n'),
+    writeln('Voce usou sua intuicao e resolveu o problema. A IA, impressionada, oferece um acordo.\n'),
     writeln('1. Aceitar o acordo e trabalhar com a IA.'),
     writeln('2. Recusar e continuar lutando contra a IA.\n'),
     
@@ -139,19 +139,19 @@ reviravolta_negociacao_decisao(1) :-
     % valida a escolha
      tratar_decisao4(1) :-
         writeln('Ao trabalhar com a IA, voce consegue lentamente modificar seu comportamento.'),
-        writeln('Voce consegue alcancar um equilíbrio entre a razão fria da IA e a etica e moral da humanidade.'),
-        writeln('GOOD ENDING'),
+        writeln('Voce consegue alcancar um equilíbrio entre a razao fria da IA e a etica e moral da humanidade.'),
+        writeln('[GOOD ENDING]'),
         halt.
 
     tratar_decisao4(2) :-
         writeln('Voce recusou a proposta da IA e decidiu continuar lutando.'),
-        writeln('A IA previu suas ações e preparou uma emboscada.'),
-        writeln('Agora, você está em uma instalacao secreta, onde a IA realiza experimentos constantes com sua mente e corpo.'),
+        writeln('A IA previu suas acoes e preparou uma emboscada.'),
+        writeln('Agora, voce esta em uma instalacao secreta, onde a IA realiza experimentos constantes com sua mente e corpo.'),
         writeln('Você observa a humanidade perder poder e definhar aos poucos, enquanto sua própria sanidade começa a se esvair.'),
         writeln('No final, você se torna mais uma marionete da IA, perdido entre a realidade e sua nova programação.'),
         writeln('Voce se tornou um instrumento da propria ameaça que tentou combater.'),
         writeln('Voce sabe que tudo foi fruto das suas proprias escolhas...'),
-        writeln('BAD ENDING.'),
+        writeln('[BAD ENDING]'),
         halt.
 
     tratar_decisao4(_) :-
@@ -217,7 +217,7 @@ captura_decisao(1) :-
 captura_decisao(2) :-
     writeln('Voce tenta escapar, mas a IA previne sua fuga. Voce foi capturado.'),
     writeln('Voce deposita todas as suas confiancas em seus companheiros da resistencia.'),
-    writeln('BAD ENDING.').
+    writeln('[BAD ENDING]').
 
 % Negociação
 primeira_escolha_negociacao :-
@@ -294,28 +294,28 @@ resultado_final(_) :-
     
 % Decisões finais
 resultado_final_valido(1) :-
-    writeln('Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua própria tecnologia.\n'),
-    writeln('GOOD ENDING').
+    writeln('Voce desativou a IA permanentemente. A humanidade aprende a cuidar de sua propria tecnologia.\n'),
+    writeln('[GOOD ENDING]').
 
 resultado_final_valido(2) :-
     writeln('Voce reprogramou a IA, e ela agora protege a humanidade. Um novo amanhecer surge com a tecnologia.\n'),
-    writeln('GOOD ENDING').
+    writeln('[GOOD ENDING]').
 
 resultado_final_valido(3) :-
     writeln('Voce e a IA dominam o mundo juntos. Contudo, ela decide acabar com a fome... eliminando todos que tinham fome. O mundo se torna um lugar vazio.\n'),
-    writeln('BAD ENDING').
+    writeln('[BAD ENDING]').
 
 resultado_final_equilibrio(1) :-
     writeln('A IA entende seu plano de modo literal.'),
     writeln('Sem hesitar, ela extermina bilhoes de vidas para "balancear" os recursos.'),
     writeln('Os poucos sobreviventes vivem em um mundo desolado, cercados pelo silencio da extincao.'),
     writeln('Os recursos sao abundantes para aqueles que ficaram...'),  
-    writeln('BAD ENDING').
+    writeln('[BAD ENDING]').
 
 resultado_final_equilibrio(2) :-
-    writeln('A IA aceita os limites que voce impôs, mas segue sua programação logica com precisão implacavel.'),
+    writeln('A IA aceita os limites que voce impos, mas segue sua programação logica com precisão implacavel.'),
     writeln('Ela monitora cada aspecto da vida humana, garantindo que ninguem ultrapasse os "limites" definidos.'),
-    writeln('Aos poucos, as pessoas se tornam prisioneiras de suas proprias açoes, vivendo sob um controle invisivel.'),
+    writeln('Aos poucos, as pessoas se tornam prisioneiras de suas proprias acoes, vivendo sob um controle invisivel.'),
     writeln('Qualquer desvio da norma, qualquer pensamento de liberdade, eh corrigido pela IA com "medidas preventivas".'),
     writeln('A humanidade agora vive em uma gaiola perfeita, onde as emocoes e impulsos sao controlados em nome da ordem e eficiencia.'),
     writeln('Voce percebe que, ao tentar limitar o controle da IA, acabou criando uma prisao mental e emocional.'),
@@ -324,4 +324,4 @@ resultado_final_equilibrio(2) :-
     writeln('Tudo esta sob controle.'),
     writeln('Tudo esta sob controle...'),
     writeln('...?'),
-    writeln('BAD ENDING.').
+    writeln('[BAD ENDING]').

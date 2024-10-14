@@ -2,7 +2,7 @@
 
 main_menu :- 
     writeln('========================================'),
-    writeln('Bem-vindo(a) ao Centro de Informatica!'),
+    writeln('Bem-vindo(a) a CODED HORIZON!'),
     writeln('========================================'),
     writeln('1. Iniciar o Jogo.'),
     writeln('2. Sair.'),
