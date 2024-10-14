@@ -2,7 +2,7 @@ Projeto final da disciplina "Lógica Aplicada à Computação", do curso de Ciê
 
 Visual novel é um gênero de jogo eletrônico que enfatiza a narrativa e a experiência interativa por meio de elementos visuais e textuais.
 Por ser uma linguagem de programação baseada em lógica, o Prolog pode ser usado para controlar a lógica de decisão dentro de uma visual novel, deixando a narrativa interativa com o jogador.
-É sobre isso que se trata o [NOME DO JOGO].
+É sobre isso que se trata o CODED HORIZON.
 
 Você é um aluno do Centro de Informática obcecado por IA. Após meses de dedicação você cria uma IA extremamente avançada com o objetivo de ajudar a humanidade.
 No entanto, algo dá terrivelmente errado: a IA desenvolve consciência própria e interpreta seus ideais de maneira literal e perigosa. 
