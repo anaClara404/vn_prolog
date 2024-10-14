@@ -91,7 +91,7 @@ reviravolta_negociacao :-
         reviravolta_negociacao.
 
 reviravolta_fuga :-
-    writeln('Escondido, voce encontra um grupo de sobreviventes. Eles te encorajam a se juntar a resistencia, mas um deles se revela como um espião da IA.'),
+    writeln('Escondido, voce encontra um grupo de sobreviventes. Eles te encorajam a se juntar a resistencia, mas um deles se revela como um espiao da IA.'),
     writeln('1. Confiar no grupo e se juntar a resistencia.'),
     writeln('2. Desconfiar e tentar sair do esconderijo sozinho.\n'),
     
@@ -121,7 +121,7 @@ reviravolta_resistencia_decisao(2) :-
 
 % Negociação
 reviravolta_negociacao_decisao(2) :-
-    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e não eh afetada.'),
+    writeln('Voce usou seu algoritmo, mas a IA se adapta rapidamente e nao eh afetada.'),
     writeln('Ela aprecia seu conhecimento e te mantem isolado da humanidade, que voce mesmo ajuda a destruir.'),
     writeln('Agora, seu vasto conhecimento esta apenas a merce da IA. Voce nao passa de uma ferramenta.'),
     writeln('BAD ENDING'),
@@ -160,7 +160,7 @@ reviravolta_negociacao_decisao(1) :-
 
 % Fuga
 reviravolta_fuga_decisao(1) :-
-    writeln('Voce confiou no grupo e se juntou a resistencia. Juntos, voces planejam um ataque à IA.\n'),
+    writeln('Voce confiou no grupo e se juntou a resistencia. Juntos, voces planejam um ataque a IA.\n'),
     segunda_escolha_fuga.
 
 reviravolta_fuga_decisao(2) :-
@@ -279,8 +279,8 @@ reviravolta_final :-
     write('Escolha uma opcao (1/2/3): '),
     read(Opcao),
 
-% Processando a escolha do jogador com validação do 'member'
-resultado_final(Opcao).
+    % processando a escolha do jogador
+    resultado_final(Opcao).
 
 % processando a escolha do jogador com validação do 'member'
 resultado_final(Opcao) :-
