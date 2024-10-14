@@ -12,9 +12,9 @@ Será que você consegue controlar sua criação ou será subjugado por ela? Sua
 Instruções para executar a visual novel:
 1. Instalar o interpretador swipl;
 2. Abrir o terminal no diretório do projeto;
-3. Digitar swipl para iniciar o interpretador;
-4. Digitar consult('nome.pl') para todos os arquivos .pl;
-5. Digitar 'menu' para abrir o menu e iniciar a execução.
+3. Digitar "swipl" para iniciar o interpretador;
+4. Digitar "consult('nome.pl')" para todos os arquivos .pl;
+5. Digitar "menu." para abrir o menu e iniciar a execução.
 
 Tecnologias usadas:
 1. Interpretador swipl;
