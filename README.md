@@ -21,6 +21,8 @@ Tecnologias usadas:
 2. Visual Studio Code.
 
 Aqui está a walktrough da visual novel, com todos os caminhos e finais que o usuário pode conseguir de acordo com suas escolhas:
-![code horizon walktrough](https://github.com/user-attachments/assets/22c47ad5-229c-42a1-a8a2-5d48edc06cf0)
+
+![coded horizon walkthrough](https://github.com/user-attachments/assets/d3cf75a8-3d9d-4cb1-8832-8bff29e01e0e)
+
 
 Bom jogo!
