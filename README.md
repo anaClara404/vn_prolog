@@ -19,8 +19,8 @@ Será que você consegue controlar sua criação ou será subjugado por ela? Sua
 5. Digitar "menu." para abrir o menu e iniciar a execução.
 
 ## Tecnologias usadas:
-1. Interpretador swipl; https://www.swi-prolog.org/
-2. ![Visual Studio Code.] (https://code.visualstudio.com/)
+1. [Interpretador swipl](https://www.swi-prolog.org/)
+2. [Visual Studio Code](https://code.visualstudio.com/)
 
 ### Aqui está a walktrough da visual novel, com todos os caminhos e finais que o usuário pode conseguir de acordo com suas escolhas:
 
